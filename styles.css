@@ -1773,6 +1773,7 @@ body.age-gate-active {
   max-width: 28rem;
   width: 100%;
   animation: ageGateFadeIn 0.8s var(--ease-out) both;
+  border-color: var(--burgundy);
 }
 
 @keyframes ageGateFadeIn {
@@ -1914,7 +1915,7 @@ body.age-gate-active {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--burgundy);
+  background: var(--cream);
   opacity: 0;
   visibility: hidden;
   transition:
@@ -1947,7 +1948,7 @@ body.age-gate-active {
   font-family: var(--font-serif);
   font-size: clamp(1.25rem, 3vw, 1.75rem);
   font-weight: 400;
-  color: var(--cream);
+  color: var(--burgundy);
   letter-spacing: 0.03em;
 }
 
@@ -1955,7 +1956,7 @@ body.age-gate-active {
   font-family: var(--font-serif);
   font-size: 0.875rem;
   line-height: 1.7;
-  color: var(--cream);
+  color: var(--burgundy);
   opacity: 0.6;
 }
 
