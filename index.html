@@ -160,6 +160,55 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <!-- Age Gate Overlay -->
+    <div id="age-gate" class="age-gate" role="dialog" aria-modal="true" aria-labelledby="age-gate-title">
+      <div class="age-gate__grain" aria-hidden="true"></div>
+      <div class="age-gate__content">
+        <div class="age-gate__ornament" aria-hidden="true">
+          <svg width="120" height="20" viewBox="0 0 120 20" fill="none">
+            <path d="M0 10 Q30 0 60 10 Q90 20 120 10" stroke="currentColor" stroke-width="1" fill="none"/>
+          </svg>
+        </div>
+
+        <img src="images/apollo_logo.png" alt="Apollo Spirit" class="age-gate__logo" width="140" height="140" />
+
+        <h2 id="age-gate-title" class="age-gate__title">Age Verification</h2>
+        <p class="age-gate__text">
+          You must be of legal drinking age<br>to enter this site.
+        </p>
+        <p class="age-gate__question">Are you over 18?</p>
+
+        <div class="age-gate__buttons">
+          <button id="age-gate-yes" class="age-gate__btn age-gate__btn--yes" type="button">
+            <span>Yes, I Am</span>
+          </button>
+          <button id="age-gate-no" class="age-gate__btn age-gate__btn--no" type="button">
+            <span>No</span>
+          </button>
+        </div>
+
+        <div class="age-gate__ornament" aria-hidden="true">
+          <svg width="120" height="20" viewBox="0 0 120 20" fill="none">
+            <path d="M0 10 Q30 20 60 10 Q90 0 120 10" stroke="currentColor" stroke-width="1" fill="none"/>
+          </svg>
+        </div>
+
+        <p class="age-gate__legal">Please drink responsibly.</p>
+
+        <!-- Rejection message (hidden by default) -->
+        <div id="age-gate-rejected" class="age-gate__rejected" aria-live="assertive">
+          <div class="age-gate__rejected-inner">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+              <circle cx="16" cy="16" r="14" stroke="currentColor" stroke-width="1.5" fill="none"/>
+              <path d="M10 10l12 12M22 10L10 22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+            <p class="age-gate__rejected-title">Sorry</p>
+            <p class="age-gate__rejected-text">You must be of legal drinking age to access this site. Please come back when you are older.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Skip Navigation -->
     <a href="#main-content" class="skip-link">Skip to main content</a>
 

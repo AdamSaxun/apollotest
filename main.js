@@ -7,6 +7,43 @@
 (function () {
   "use strict";
 
+  /* --- Age Gate --- */
+  var ageGate = document.getElementById("age-gate");
+  var ageYes = document.getElementById("age-gate-yes");
+  var ageNo = document.getElementById("age-gate-no");
+  var ageRejected = document.getElementById("age-gate-rejected");
+
+  if (ageGate) {
+    // Check if already verified
+    if (localStorage.getItem("apollo_age_verified") === "true") {
+      ageGate.classList.add("is-hidden");
+      ageGate.style.display = "none";
+    } else {
+      document.body.classList.add("age-gate-active");
+
+      // Yes — verified
+      if (ageYes) {
+        ageYes.addEventListener("click", function () {
+          localStorage.setItem("apollo_age_verified", "true");
+          document.body.classList.remove("age-gate-active");
+          ageGate.classList.add("is-hidden");
+          setTimeout(function () {
+            ageGate.style.display = "none";
+          }, 700);
+        });
+      }
+
+      // No — rejected
+      if (ageNo) {
+        ageNo.addEventListener("click", function () {
+          if (ageRejected) {
+            ageRejected.classList.add("is-visible");
+          }
+        });
+      }
+    }
+  }
+
   /* --- Navigation Toggle --- */
   var toggle = document.querySelector(".nav__toggle");
   var menu = document.querySelector(".nav__menu");
