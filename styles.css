@@ -519,8 +519,14 @@ a {
   object-fit: contain;
 }
 
-.bottle-scene:hover img {
+.bottle-scene.is-touched img {
   will-change: clip-path;
+}
+
+@media (hover: hover) {
+  .bottle-scene:hover img {
+    will-change: clip-path;
+  }
 }
 
 .bottle-front {
@@ -529,8 +535,14 @@ a {
   transition: clip-path var(--transition-duration) var(--transition-ease);
 }
 
-.bottle-scene:hover .bottle-front {
+.bottle-scene.is-touched .bottle-front {
   clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%);
+}
+
+@media (hover: hover) {
+  .bottle-scene:hover .bottle-front {
+    clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%);
+  }
 }
 
 .bottle-back {
@@ -539,8 +551,14 @@ a {
   transition: clip-path var(--transition-duration) var(--transition-ease);
 }
 
-.bottle-scene:hover .bottle-back {
+.bottle-scene.is-touched .bottle-back {
   clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+@media (hover: hover) {
+  .bottle-scene:hover .bottle-back {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+  }
 }
 
 .bottle-edge {
@@ -571,10 +589,18 @@ a {
   border-radius: 2px;
 }
 
-.bottle-scene:hover .bottle-edge {
+.bottle-scene.is-touched .bottle-edge {
   opacity: 1;
   transition-delay: calc(var(--transition-duration) * 0.25);
   transition-duration: calc(var(--transition-duration) * 0.15);
+}
+
+@media (hover: hover) {
+  .bottle-scene:hover .bottle-edge {
+    opacity: 1;
+    transition-delay: calc(var(--transition-duration) * 0.25);
+    transition-duration: calc(var(--transition-duration) * 0.15);
+  }
 }
 
 .bottle-shine {
@@ -604,8 +630,14 @@ a {
   transition: left var(--transition-duration) var(--transition-ease);
 }
 
-.bottle-scene:hover .bottle-shine::after {
+.bottle-scene.is-touched .bottle-shine::after {
   left: 130%;
+}
+
+@media (hover: hover) {
+  .bottle-scene:hover .bottle-shine::after {
+    left: 130%;
+  }
 }
 
 .bottle-shadow {

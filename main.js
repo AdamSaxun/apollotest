@@ -122,6 +122,15 @@
     });
   }
 
+  /* --- Bottle Touch Rotation (mobile) --- */
+  var bottleScene = document.querySelector(".bottle-scene");
+
+  if (bottleScene && "ontouchstart" in window) {
+    bottleScene.addEventListener("click", function () {
+      bottleScene.classList.toggle("is-touched");
+    });
+  }
+
   /* --- Flip Cards (Team section) --- */
   var flipCards = document.querySelectorAll(".flip-card");
 
