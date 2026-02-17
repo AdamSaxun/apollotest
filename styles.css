@@ -1469,6 +1469,24 @@ a {
   opacity: 0.35;
 }
 
+@media (max-width: 768px) {
+  .flip-card__role {
+    /* Remove absolute positioning if it's causing the overlap */
+    position: static;
+    margin-bottom: 0.5rem;
+    font-size: 0.85rem;
+  }
+
+  .flip-card__hint-text {
+    /* Ensure the hint text sits clearly at the bottom without overlapping */
+    position: relative;
+    margin-top: auto; /* Pushes the hint text to the bottom of the flex container */
+    padding-top: 1rem;
+    border-top: 1px solid rgba(147, 15, 47, 0.1); /* Optional separator */
+    font-size: 0.75rem;
+    opacity: 0.8;
+  }
+}
 /* ============================================================
    CONTACT
    ============================================================ */
