@@ -250,4 +250,83 @@
       });
     }
   }
+
+  /* --- Bar Logos Carousel --- */
+  var carouselTrack = document.querySelector("[data-carousel]");
+
+  if (carouselTrack) {
+    var isMobile = window.matchMedia("(max-width: 39.99em)").matches;
+    var slides = carouselTrack.querySelectorAll(".bar-logos__slide");
+
+    if (!isMobile) {
+      // Desktop: duplicate slides for seamless infinite loop
+      var fragment = document.createDocumentFragment();
+      for (var s = 0; s < slides.length; s++) {
+        fragment.appendChild(slides[s].cloneNode(true));
+      }
+      carouselTrack.appendChild(fragment);
+
+      // Pause on mousedown (click & hold), resume on mouseup/mouseleave
+      carouselTrack.addEventListener("mousedown", function () {
+        carouselTrack.classList.add("is-paused");
+      });
+
+      document.addEventListener("mouseup", function () {
+        carouselTrack.classList.remove("is-paused");
+      });
+
+      carouselTrack.addEventListener("mouseleave", function () {
+        carouselTrack.classList.remove("is-paused");
+      });
+    } else {
+      // Mobile: drag to scroll
+      var isDragging = false;
+      var startX = 0;
+      var scrollLeft = 0;
+
+      carouselTrack.style.overflowX = "auto";
+
+      carouselTrack.addEventListener("touchstart", function (e) {
+        isDragging = true;
+        startX = e.touches[0].pageX - carouselTrack.offsetLeft;
+        scrollLeft = carouselTrack.scrollLeft;
+        carouselTrack.classList.add("is-dragging");
+      }, { passive: true });
+
+      carouselTrack.addEventListener("touchmove", function (e) {
+        if (!isDragging) return;
+        var x = e.touches[0].pageX - carouselTrack.offsetLeft;
+        var walk = (x - startX) * 1.5;
+        carouselTrack.scrollLeft = scrollLeft - walk;
+      }, { passive: true });
+
+      carouselTrack.addEventListener("touchend", function () {
+        isDragging = false;
+        carouselTrack.classList.remove("is-dragging");
+      });
+
+      // Mouse drag fallback for mobile-width desktops
+      carouselTrack.addEventListener("mousedown", function (e) {
+        isDragging = true;
+        startX = e.pageX - carouselTrack.offsetLeft;
+        scrollLeft = carouselTrack.scrollLeft;
+        carouselTrack.classList.add("is-dragging");
+        e.preventDefault();
+      });
+
+      carouselTrack.addEventListener("mousemove", function (e) {
+        if (!isDragging) return;
+        var x = e.pageX - carouselTrack.offsetLeft;
+        var walk = (x - startX) * 1.5;
+        carouselTrack.scrollLeft = scrollLeft - walk;
+      });
+
+      document.addEventListener("mouseup", function () {
+        if (isDragging) {
+          isDragging = false;
+          carouselTrack.classList.remove("is-dragging");
+        }
+      });
+    }
+  }
 })();
