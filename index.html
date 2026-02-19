@@ -57,7 +57,7 @@
     <link
       rel="icon"
       type="image/png"
-      href="images/apollo_logo.png"
+      href="images/apollo_logo.webp"
     />
 
     <!-- JSON-LD Structured Data -->
@@ -135,21 +135,7 @@
         line-height: 1.6;
         overflow-x: hidden;
       }
-      .skip-link {
-        position: absolute;
-        top: -100%;
-        left: 50%;
-        transform: translateX(-50%);
-        background: var(--burgundy);
-        color: var(--cream);
-        padding: 0.75rem 1.5rem;
-        z-index: 1000;
-        border-radius: 0 0 0.25rem 0.25rem;
-        transition: top 0.2s;
-      }
-      .skip-link:focus {
-        top: 0;
-      }
+    
       img {
         max-width: 100%;
         height: auto;
@@ -209,15 +195,13 @@
       </div>
     </div>
 
-    <!-- Skip Navigation -->
-    <a href="#main-content" class="skip-link">Skip to main content</a>
 
     <!-- Header / Navigation -->
     <header class="site-header">
       <nav class="nav" aria-label="Main navigation">
         <a href="/#hero" class="nav__logo" aria-label="Apollo Spirit — Home">
           <img src="images/apollo_logo.png" alt="Apollo" class="nav__logo-mark" width="32" height="32" />
-          <span class="nav__logo-text">Apollo</span>
+          <span class="nav__logo-text">Apollo-Nova</span>
         </a>
 
         <button
@@ -241,15 +225,17 @@
           <li><a href="#contact" class="nav__link">Contact</a></li>
         </ul>
 
-        <div class="nav__lang" role="group" aria-label="Language switcher">
-          <a href="/en/index.html" class="nav__lang-btn" aria-pressed="false">
+   <div class="nav__lang" role="group" aria-label="Language switcher">
+  <a href="/en/index.html" class="nav__lang-btn" aria-current="page">
     EN
   </a>
-          <span class="nav__lang-sep" aria-hidden="true">/</span>
-          <a href="/sk/index-sk.html" class="nav__lang-btn" aria-pressed="false">
+  
+  <span class="nav__lang-sep" aria-hidden="true">/</span>
+  
+  <a href="/sk/index-sk.html" class="nav__lang-btn">
     SK
   </a>
-        </div>
+</div>
       </nav>
     </header>
 
@@ -371,6 +357,7 @@
               href="https://drinkcentrum.sk/produkt/apollo-nova-repak-50-07l"
               class="sale__buy-btn"
               aria-label="Buy Apollo Spirit"
+              target="_blank" rel="noopener noreferrer"
             >
               <span class="sale__buy-text">Buy Now</span>
               <svg
@@ -698,30 +685,6 @@
             <article class="cocktail-card">
               <div class="cocktail-card__img">
                 <img
-                  src="images/cocktails/A&T.webp"
-                  alt="Apollo Highball cocktail in a tall glass with tonic and cucumber garnish"
-                  width="400"
-                  height="500"
-                  loading="lazy"
-                  decoding="async"
-                />
-              </div>
-              <div class="cocktail-card__body">
-                <h3 class="cocktail-card__name">A&T</h3>
-                <p class="cocktail-card__type">BUILD, HIGHBALL, RADISH SLICE</p>
-                <ul class="cocktail-card__ingredients" aria-label="Ingredients">
-                  <li>50 ML APOLLO NOVA</li>
-                  <li>10 ML Elderflower cordial</li>
-                  <li>100 ML Tonic Water</li>
-                  
-                </ul>
-              </div>
-            </article>
-
-            <!-- Card 2 — Visible -->
-            <article class="cocktail-card">
-              <div class="cocktail-card__img">
-                <img
                   src="images/cocktails/bird valley paloma.webp"
                   alt="Earth Sour cocktail"
                   width="400"
@@ -731,7 +694,7 @@
                 />
               </div>
               <div class="cocktail-card__body">
-                <h3 class="cocktail-card__name">BIRD VALLEY PALOMA</h3>
+                <h3 class="cocktail-card__name">BEET PALOMA</h3>
                 <p class="cocktail-card__type">HIGHBALL, BEETROOT SALT & BEETROOT</p>
                 <ul class="cocktail-card__ingredients" aria-label="Ingredients">
                   <li>30 ML APOLLO NOVA</li>
@@ -743,12 +706,12 @@
               </div>
             </article>
 
-            <!-- Card 3 — Visible -->
+            <!-- Card 2 — Visible -->
             <article class="cocktail-card">
               <div class="cocktail-card__img">
                 <img
-                  src="images/cocktails/beat diabolo.webp"
-                  alt="Beetroot Negroni cocktail"
+                  src="images/cocktails/beet negroni.webp"
+                  alt="Sugar Root Smash cocktail"
                   width="400"
                   height="500"
                   loading="lazy"
@@ -756,14 +719,35 @@
                 />
               </div>
               <div class="cocktail-card__body">
-                <h3 class="cocktail-card__name">BEAT DIABOLO</h3>
-                <p class="cocktail-card__type">BUILD, HIGHBALL LIME WEDGE & BLUEBERRIES</p>
+                <h3 class="cocktail-card__name">BEET NEGRONI</h3>
+                <p class="cocktail-card__type">STIR, ROCK, MICRO HERBS</p>
                 <ul class="cocktail-card__ingredients" aria-label="Ingredients">
-                  <li>40 ML APOLLO NOVA</li>
-                  <li>25 ML Lime juice</li>
-                  <li>10 ML Creme de Cassis</li>
-                  <li>15 ML Sugar Syrup</li>
-                  <li>80 ML Ginger Beer</li>
+                  <li>10 ML APOLLO NOVA</li>
+                  <li>30 ML Sweet Vermouth</li>
+                  <li>30 ML Campari</li>
+                </ul>
+              </div>
+            </article>
+            <!-- Card 3 — Visible -->
+            <article class="cocktail-card">
+              <div class="cocktail-card__img">
+                <img
+                  src="images/cocktails/delphi.webp"
+                  alt="Harvest Collins cocktail"
+                  width="400"
+                  height="500"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="cocktail-card__body">
+                <h3 class="cocktail-card__name">DELPHI</h3>
+                <p class="cocktail-card__type">SHAKE COUPE, LEMON, PEEL</p>
+                <ul class="cocktail-card__ingredients" aria-label="Ingredients">
+                  <li>45 ML APOLLO NOVA</li>
+                  <li>10 ML Apricot Liqueur</li>
+                  <li>10 ML Orgeat</li>
+                  <li>25 ML Lime Juice</li>
                 </ul>
               </div>
             </article>
@@ -772,8 +756,8 @@
             <article class="cocktail-card">
               <div class="cocktail-card__img">
                 <img
-                  src="images/cocktails/apple fizz.webp"
-                  alt="Slovak Mule cocktail"
+                  src="images/cocktails/love & peace.webp"
+                  alt="Sugar Root Smash cocktail"
                   width="400"
                   height="500"
                   loading="lazy"
@@ -781,11 +765,13 @@
                 />
               </div>
               <div class="cocktail-card__body">
-                <h3 class="cocktail-card__name">APPLE FIZZ</h3>
-                <p class="cocktail-card__type">BUILD, HIGHBALL, APPLE SLICE</p>
+                <h3 class="cocktail-card__name">LOVE & PEACE</h3>
+                <p class="cocktail-card__type">STIR, ROCK, LEMON PEEL</p>
                 <ul class="cocktail-card__ingredients" aria-label="Ingredients">
-                  <li>50 ML APOLLO NOVA</li>
-                  <li>120 ML Apple Soda</li>
+                  <li>30 ML APOLLO NOVA</li>
+                  <li>30 ML Amaretto</li>
+                  <li>5 ML Islay Whisky</li>
+                  
                 </ul>
               </div>
             </article>
@@ -844,8 +830,8 @@
             <article class="cocktail-card">
               <div class="cocktail-card__img">
                 <img
-                  src="images/cocktails/delphi.webp"
-                  alt="Harvest Collins cocktail"
+                  src="images/cocktails/beat diabolo.webp"
+                  alt="Beetroot Negroni cocktail"
                   width="400"
                   height="500"
                   loading="lazy"
@@ -853,13 +839,14 @@
                 />
               </div>
               <div class="cocktail-card__body">
-                <h3 class="cocktail-card__name">DELPHI</h3>
-                <p class="cocktail-card__type">SHAKE COUPE, LEMON, PEEL</p>
+                <h3 class="cocktail-card__name">BEAT DIABOLO</h3>
+                <p class="cocktail-card__type">BUILD, HIGHBALL LIME WEDGE & BLUEBERRIES</p>
                 <ul class="cocktail-card__ingredients" aria-label="Ingredients">
-                  <li>45 ML APOLLO NOVA</li>
-                  <li>10 ML Apricot Liqueur</li>
-                  <li>10 ML Orgeat</li>
-                  <li>25 ML Lime Juice</li>
+                  <li>40 ML APOLLO NOVA</li>
+                  <li>25 ML Lime juice</li>
+                  <li>10 ML Creme de Cassis</li>
+                  <li>15 ML Sugar Syrup</li>
+                  <li>80 ML Ginger Beer</li>
                 </ul>
               </div>
             </article>
@@ -964,8 +951,8 @@ APOLLO’S</h3>
             <article class="cocktail-card">
               <div class="cocktail-card__img">
                 <img
-                  src="images/cocktails/beet negroni.webp"
-                  alt="Sugar Root Smash cocktail"
+                  src="images/cocktails/A&T.webp"
+                  alt="Apollo Highball cocktail in a tall glass with tonic and cucumber garnish"
                   width="400"
                   height="500"
                   loading="lazy"
@@ -973,12 +960,13 @@ APOLLO’S</h3>
                 />
               </div>
               <div class="cocktail-card__body">
-                <h3 class="cocktail-card__name">BEET NEGRONI</h3>
-                <p class="cocktail-card__type">STIR, ROCK, MICRO HERBS</p>
+                <h3 class="cocktail-card__name">A&T</h3>
+                <p class="cocktail-card__type">BUILD, HIGHBALL, RADISH SLICE</p>
                 <ul class="cocktail-card__ingredients" aria-label="Ingredients">
-                  <li>10 ML APOLLO NOVA</li>
-                  <li>30 ML Sweet Vermouth</li>
-                  <li>30 ML Campari</li>
+                  <li>50 ML APOLLO NOVA</li>
+                  <li>10 ML Elderflower cordial</li>
+                  <li>100 ML Tonic Water</li>
+                  
                 </ul>
               </div>
             </article>
@@ -986,8 +974,8 @@ APOLLO’S</h3>
             <article class="cocktail-card">
               <div class="cocktail-card__img">
                 <img
-                  src="images/cocktails/love & peace.webp"
-                  alt="Sugar Root Smash cocktail"
+                  src="images/cocktails/apple fizz.webp"
+                  alt="Slovak Mule cocktail"
                   width="400"
                   height="500"
                   loading="lazy"
@@ -995,13 +983,11 @@ APOLLO’S</h3>
                 />
               </div>
               <div class="cocktail-card__body">
-                <h3 class="cocktail-card__name">LOVE & PEACE</h3>
-                <p class="cocktail-card__type">STIR, ROCK, LEMON PEEL</p>
+                <h3 class="cocktail-card__name">APPLE FIZZ</h3>
+                <p class="cocktail-card__type">BUILD, HIGHBALL, APPLE SLICE</p>
                 <ul class="cocktail-card__ingredients" aria-label="Ingredients">
-                  <li>30 ML APOLLO NOVA</li>
-                  <li>30 ML Amaretto</li>
-                  <li>5 ML Islay Whisky</li>
-                  
+                  <li>50 ML APOLLO NOVA</li>
+                  <li>120 ML Apple Soda</li>
                 </ul>
               </div>
             </article>
@@ -1106,7 +1092,7 @@ APOLLO’S</h3>
                 <div class="flip-card__front">
                   <div class="flip-card__portrait">
                     <div class="flip-card__img-placeholder" aria-hidden="true">
-                      <img src="images/profiles/Profile_1.webp" alt="">
+                      <img src="images/profiles/Profile_1.webp" alt="Maroš Potůček">
                       
                     </div>
                   </div>
@@ -1132,14 +1118,7 @@ APOLLO’S</h3>
                 </div>
                 <div class="flip-card__back">
                   <div class="flip-card__back-ornament" aria-hidden="true">
-                    <svg width="40" height="12" viewBox="0 0 40 12" fill="none">
-                      <path
-                        d="M0 6 Q10 0 20 6 Q30 12 40 6"
-                        stroke="currentColor"
-                        stroke-width="0.75"
-                        fill="none"
-                      />
-                    </svg>
+                
                   </div>
                   <p class="flip-card__bio">
                     Awarded Best Bartender in Slovakia, Maroš discovered the
@@ -1148,16 +1127,9 @@ APOLLO’S</h3>
                     distillery tradition to craft Apollo Spirit.
                   </p>
                   <div class="flip-card__back-ornament" aria-hidden="true">
-                    <svg width="40" height="12" viewBox="0 0 40 12" fill="none">
-                      <path
-                        d="M0 6 Q10 12 20 6 Q30 0 40 6"
-                        stroke="currentColor"
-                        stroke-width="0.75"
-                        fill="none"
-                      />
-                    </svg>
+                  
                   </div>
-                  <p class="flip-card__back-label">Founder</p>
+                  
                 </div>
               </div>
             </article>
@@ -1173,39 +1145,21 @@ APOLLO’S</h3>
                 <div class="flip-card__front">
                   <div class="flip-card__portrait">
                     <div class="flip-card__img-placeholder" aria-hidden="true">
-                      <img src="images/profiles/Profile_2.webp" alt="">
+                      <img src="images/profiles/Profile_2.webp" alt="Mária Juríková">
                     </div>
                   </div>
                   <div class="flip-card__name-block">
-                    <h3 class="flip-card__name">Tomáš Kováč</h3>
+                    <h3 class="flip-card__name">Mária Juríková</h3>
                     <p class="flip-card__role">Head Distiller</p>
                   </div>
                   <div class="flip-card__hint" aria-hidden="true">
                     <span class="flip-card__hint-text">Tap to reveal</span
-                    ><svg
-                      width="14"
-                      height="14"
-                      viewBox="0 0 14 14"
-                      fill="none"
                     >
-                      <path
-                        d="M2 7h10M8 3l4 4-4 4"
-                        stroke="currentColor"
-                        stroke-width="1"
-                      />
-                    </svg>
                   </div>
                 </div>
                 <div class="flip-card__back">
                   <div class="flip-card__back-ornament" aria-hidden="true">
-                    <svg width="40" height="12" viewBox="0 0 40 12" fill="none">
-                      <path
-                        d="M0 6 Q10 0 20 6 Q30 12 40 6"
-                        stroke="currentColor"
-                        stroke-width="0.75"
-                        fill="none"
-                      />
-                    </svg>
+                    
                   </div>
                   <p class="flip-card__bio">
                     Third-generation distiller carrying forward decades of
@@ -1215,16 +1169,9 @@ APOLLO’S</h3>
                     recipe.
                   </p>
                   <div class="flip-card__back-ornament" aria-hidden="true">
-                    <svg width="40" height="12" viewBox="0 0 40 12" fill="none">
-                      <path
-                        d="M0 6 Q10 12 20 6 Q30 0 40 6"
-                        stroke="currentColor"
-                        stroke-width="0.75"
-                        fill="none"
-                      />
-                    </svg>
+                    
                   </div>
-                  <p class="flip-card__back-label">Distiller</p>
+                  
                 </div>
               </div>
             </article>
@@ -1240,39 +1187,21 @@ APOLLO’S</h3>
                 <div class="flip-card__front">
                   <div class="flip-card__portrait">
                     <div class="flip-card__img-placeholder" aria-hidden="true">
-                      <img src="images/profiles/Profile_3.webp" alt="">
+                      <img src="images/profiles/Profile_3.webp" alt="Martin Hudák">
                     </div>
                   </div>
                   <div class="flip-card__name-block">
-                    <h3 class="flip-card__name">Lucia Némethová</h3>
+                    <h3 class="flip-card__name">Martin Hudák</h3>
                     <p class="flip-card__role">Brand Director</p>
                   </div>
                   <div class="flip-card__hint" aria-hidden="true">
                     <span class="flip-card__hint-text">Tap to reveal</span
-                    ><svg
-                      width="14"
-                      height="14"
-                      viewBox="0 0 14 14"
-                      fill="none"
                     >
-                      <path
-                        d="M2 7h10M8 3l4 4-4 4"
-                        stroke="currentColor"
-                        stroke-width="1"
-                      />
-                    </svg>
                   </div>
                 </div>
                 <div class="flip-card__back">
                   <div class="flip-card__back-ornament" aria-hidden="true">
-                    <svg width="40" height="12" viewBox="0 0 40 12" fill="none">
-                      <path
-                        d="M0 6 Q10 0 20 6 Q30 12 40 6"
-                        stroke="currentColor"
-                        stroke-width="0.75"
-                        fill="none"
-                      />
-                    </svg>
+                    
                   </div>
                   <p class="flip-card__bio">
                     With a decade in European luxury hospitality, Lucia shapes
@@ -1281,16 +1210,9 @@ APOLLO’S</h3>
                     contemporary audience that values craft and provenance.
                   </p>
                   <div class="flip-card__back-ornament" aria-hidden="true">
-                    <svg width="40" height="12" viewBox="0 0 40 12" fill="none">
-                      <path
-                        d="M0 6 Q10 12 20 6 Q30 0 40 6"
-                        stroke="currentColor"
-                        stroke-width="0.75"
-                        fill="none"
-                      />
-                    </svg>
+                  
                   </div>
-                  <p class="flip-card__back-label">Brand</p>
+                  
                 </div>
               </div>
             </article>
@@ -1306,39 +1228,21 @@ APOLLO’S</h3>
                 <div class="flip-card__front">
                   <div class="flip-card__portrait">
                     <div class="flip-card__img-placeholder" aria-hidden="true">
-                      <img src="images/profiles/Profile_4.jpg" alt="">
+                      <img src="images/profiles/Profile_4.jpg" alt="Oli Džupinková">
                     </div>
                   </div>
                   <div class="flip-card__name-block">
-                    <h3 class="flip-card__name">Jakub Horváth</h3>
+                    <h3 class="flip-card__name">Oli Džupinková</h3>
                     <p class="flip-card__role">Agriculture Lead</p>
                   </div>
                   <div class="flip-card__hint" aria-hidden="true">
                     <span class="flip-card__hint-text">Tap to reveal</span
-                    ><svg
-                      width="14"
-                      height="14"
-                      viewBox="0 0 14 14"
-                      fill="none"
                     >
-                      <path
-                        d="M2 7h10M8 3l4 4-4 4"
-                        stroke="currentColor"
-                        stroke-width="1"
-                      />
-                    </svg>
                   </div>
                 </div>
                 <div class="flip-card__back">
                   <div class="flip-card__back-ornament" aria-hidden="true">
-                    <svg width="40" height="12" viewBox="0 0 40 12" fill="none">
-                      <path
-                        d="M0 6 Q10 0 20 6 Q30 12 40 6"
-                        stroke="currentColor"
-                        stroke-width="0.75"
-                        fill="none"
-                      />
-                    </svg>
+                    
                   </div>
                   <p class="flip-card__bio">
                     Jakub manages relationships with regional beet farms,
@@ -1347,16 +1251,9 @@ APOLLO’S</h3>
                     connecting the land directly to the bottle.
                   </p>
                   <div class="flip-card__back-ornament" aria-hidden="true">
-                    <svg width="40" height="12" viewBox="0 0 40 12" fill="none">
-                      <path
-                        d="M0 6 Q10 12 20 6 Q30 0 40 6"
-                        stroke="currentColor"
-                        stroke-width="0.75"
-                        fill="none"
-                      />
-                    </svg>
+                    
                   </div>
-                  <p class="flip-card__back-label">Agriculture</p>
+                  
                 </div>
               </div>
             </article>

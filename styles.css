@@ -53,19 +53,6 @@ a {
   border: 0;
 }
 
-/* --- Skip Link (extends inline critical CSS) --- */
-.skip-link {
-  font-family: var(--font-sans);
-  font-size: 0.875rem;
-  font-weight: 600;
-  letter-spacing: 0.05em;
-}
-
-.skip-link:focus {
-  outline: 3px solid var(--burgundy);
-  outline-offset: 2px;
-}
-
 /* --- Focus Styles (WCAG AA) --- */
 :focus-visible {
   outline: 3px solid var(--burgundy);
