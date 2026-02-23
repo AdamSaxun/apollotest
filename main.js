@@ -105,23 +105,6 @@
     updateHeader();
   }
 
-  /* --- Language Switcher --- */
-  var langBtns = document.querySelectorAll(".nav__lang-btn");
-
-  for (var j = 0; j < langBtns.length; j++) {
-    langBtns[j].addEventListener("click", function () {
-      for (var k = 0; k < langBtns.length; k++) {
-        langBtns[k].classList.remove("nav__lang-btn--active");
-        langBtns[k].setAttribute("aria-pressed", "false");
-      }
-      this.classList.add("nav__lang-btn--active");
-      this.setAttribute("aria-pressed", "true");
-
-      var lang = this.getAttribute("data-lang");
-      document.documentElement.setAttribute("lang", lang);
-    });
-  }
-
   /* --- Bottle Touch Rotation (mobile) --- */
   var bottleScene = document.querySelector(".bottle-scene");
 
@@ -278,10 +261,6 @@
       carouselTrack.addEventListener("mouseleave", function () {
         carouselTrack.classList.remove("is-paused");
       });
-    } else {
-      // Mobile: native touch scroll handles everything via CSS
-      // overflow-x: scroll on .bar-logos__track + -webkit-overflow-scrolling: touch
-      // No JS needed — the browser handles finger dragging natively.
     }
   }
 })();
